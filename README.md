@@ -18,3 +18,7 @@ python3 -m http.server
 
 Then, open the browser and go to `http://localhost:8000`. The website should be displayed correctly.
 
+# Note
+
+If you cannot see the report in the browser, you can download it and open it with a PDF reader. It is 20.2 MB.
+
