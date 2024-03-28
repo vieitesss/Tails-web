@@ -1,4 +1,4 @@
-# Tiles-web
+# Tails-web
 
 ![./assets/main.jpeg](./assets/main.jpeg)
 
