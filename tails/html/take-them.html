@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" >
+  <meta name="description" content="Tails es el rincón digital para los entusiastas de los gatos. Ofrecemos un espacio informativo y de comunidad para descrubrir y compartir todo sobre estos encontadores compañeros.">
+  <link rel="shortcut icon" type="image/svg" href="/resources/images/icon-white.svg">
+  <link rel="stylesheet" href="../resources/css/index.css">
+  <link rel="stylesheet" href="../resources/css/take-them.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <title>Tails</title>
+</head>
+<body>
+  <div class="content-wrapper">
+    <header class="my-nav"></header>
+    <main>
+      <header>
+        <h1>take them</h1>
+        <h3>Elit recusandae sapiente non dolore laborum Commodi cumque culpa officia incidunt commodi odit omnis ipsum? Nostrum qui id quisquam suscipit porro! Repellat ducimus incidunt dolore quod laboriosam! Quaerat cumque saepe</h3>
+        <div class="street-cats">
+          <figure><img src="../resources/images/sleeping-cat-11.jpeg" alt="cat playing"></figure>
+          <figure><img src="../resources/images/playing-cats-2.jpeg" alt="cat playing"></figure>
+          <figure><img src="../resources/images/playing-cats-1.jpeg" alt="cat playing"></figure>
+        </div>
+      </header>
+      <section id="rescue">
+        <div class="rescue-item">
+          <figure><img src="/resources/images/sky-cat.jpeg" alt="gato con cielo de fondo"></figure>
+          <h3>por qué adoptar?</h3>
+          <p>Ipsum officia aliquam inventore molestiae quia aperiam Ex odit aliquid quod illo distinctio sed ratione. Sed in vitae quod unde sunt. Quam perspiciatis doloribus sapiente reiciendis molestias Quidem placeat dolore beatae dolore voluptatem Consectetur quasi quae magni aliquid assumenda. Optio ullam ea incidunt facere quasi. Quo alias dignissimos atque error!</p>
+        </div>
+        <div class="rescue-item">
+          <figure><img src="/resources/images/sleeping-cat-1.jpeg" alt="gato durmiendo"></figure>
+          <h3>por qué acoger?</h3>
+          <p>Ipsum officia aliquam inventore molestiae quia aperiam Ex odit aliquid quod illo distinctio sed ratione. Sed in vitae quod unde sunt. Quam perspiciatis doloribus sapiente reiciendis molestias Quidem placeat dolore beatae dolore voluptatem Consectetur quasi quae magni aliquid assumenda. Optio ullam ea incidunt facere quasi. Quo alias dignissimos atque error!</p>
+        </div>
+        <div class="rescue-item title">
+          <h2>adoptar o acoger?</h2>
+        </div>
+        <div class="rescue-item">
+          <figure><img src="/resources/images/playing-cat.jpeg" alt="gatos jugando"></figure>
+          <h3>qué tener en cuenta antes de llevarse un gatito a casa?</h3>
+          <p>Ipsum officia aliquam inventore molestiae quia aperiam Ex odit aliquid quod illo distinctio sed ratione. Sed in vitae quod unde sunt. Quam perspiciatis doloribus sapiente reiciendis molestias Quidem placeat dolore beatae dolore voluptatem Consectetur quasi quae magni aliquid assumenda. Optio ullam ea incidunt facere quasi. Quo alias dignissimos atque error!</p>
+        </div>
+      </section>
+      <section>
+        <h2>everything you need</h2>
+        <div class="map-section">
+          <div id="map"></div>
+          <div class="map-options-wrapper container-fluid">
+            <ul class="accordion" id="accordion"> <!-- Se utiliza la clase `accordion` de Bootstrap -->
+              <li class="accordion-item"> <!-- Cada uno de los elementos será un `accordion-item` -->
+                <!-- Las cabeceras del acordeón tienen la clase `accordion-header` -->
+                <h3 class="accordion-header" id="heading-protectoras">
+                  <!-- Las cabeceras necesitan tener un botón, se utiliza `accordion-button`
+                       con los atributos extra necesarios para relacionarse con el contenido
+                       al que se le asigna cada cabecera -->
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-protectoras"
+                    aria-expanded="true"
+                    aria-controls="collapse-protectoras"
+                    onclick="showProtectorsRefugees()">
+                      protectoras y refugios
+                  </button>
+                </h3>
+                <ul id="collapse-protectoras" class="accordion-collapse collapse show" aria-labelledby="heading-protectoras" data-bs-parent="#accordion">
+                  <div class="accordion-body">
+                    <!-- Este es un ejemplo de elementos que se introducen con JavaScript y que se
+                         leen de diferentes archivo XML y JSON -->
+                    <!-- <li> -->
+                    <!--   <h4>Terranova 133 - Santiago</h4> -->
+                    <!--   <p>República argentina, 46, bajo</p> -->
+                    <!--   <p>A Coruña, Santiago de compostela, 15701</p> -->
+                    <!-- </li> -->
+                  </div>
+                </ul>
+              </li>
+              <li class="accordion-item">
+                <h3 class="accordion-header" id="heading-tiendas">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-tiendas"
+                    aria-expanded="true"
+                    aria-controls="collapse-tiendas"
+                    onclick="showShops()">
+                      tiendas
+                  </button>
+                </h3>
+                <ul id="collapse-tiendas" class="accordion-collapse collapse " aria-labelledby="heading-tiendas" data-bs-parent="#accordion">
+                  <div class="accordion-body">
+                    <!-- <li> -->
+                    <!--   <h4>Terranova 133 - Santiago</h4> -->
+                    <!--   <p>República argentina, 46, bajo</p> -->
+                    <!--   <p>a coruña</p> -->
+                    <!--   <p>santiago de compostela, 15701</p> -->
+                    <!-- </li> -->
+                  </div>
+                </ul>
+              </li>
+              <li class="accordion-item">
+                <h3 class="accordion-header" id="heading-vet">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-vet"
+                    aria-expanded="true"
+                    aria-controls="collapse-vet"
+                    onclick="showVets()">
+                      veterinarias
+                  </button>
+                </h3>
+                <ul id="collapse-vet" class="accordion-collapse collapse " aria-labelledby="heading-vet" data-bs-parent="#accordion">
+                  <div class="accordion-body">
+                    <!-- <li> -->
+                    <!--   <h4>Terranova 133 - Santiago</h4> -->
+                    <!--   <p>República argentina, 46, bajo</p> -->
+                    <!--   <p>a coruña</p> -->
+                    <!--   <p>santiago de compostela, 15701</p> -->
+                    <!-- </li> -->
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </div>
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- Scripts -->
+<script src="../resources/js/take-them.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="../resources/js/index.js"></script>
+</body>
+</html>
+

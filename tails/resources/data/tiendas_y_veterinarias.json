@@ -1,0 +1,48 @@
+{
+  "tiendas": [
+    {
+      "nombre": "Zoolandia",
+      "lat": "42.87653018176427",
+      "lon": "-8.54345757025743",
+      "direccion": "Rúa de Concepción Arenal, 8",
+      "ciudad": "15702, Santiago de Compostela, A Coruña"
+    },
+    {
+      "nombre": "Gali+cotas",
+      "lat": "42.87205175226889",
+      "lon": "-8.550911578141417",
+      "direccion": "Rúa da República Arxentina, 46",
+      "ciudad": "15701, Santiago de Compostela, A Coruña"
+    },
+    {
+      "nombre": "Bichos",
+      "lat": "42.865619562031355",
+      "lon": "-8.555189489897618",
+      "direccion": "Rúa de Sánchez Freire, 62",
+      "ciudad": "15706, Santiago de Compostela, A Coruña"
+    }
+  ],
+  "veterinarias": [
+    {
+      "nombre": "Clínica veterinaria La Rosa",
+      "lat": "42.871116178989574",
+      "lon": "-8.548891772809181",
+      "direccion": "Rúa da Rosa, 36",
+      "ciudad": "15701, Santiago de Compostela, A Coruña"
+    },
+    {
+      "nombre": "Centro veterinario MG Vet",
+      "lat": "42.883615947789494",
+      "lon": "-8.548572980414036",
+      "direccion": "Rúa das Galeras, 13",
+      "ciudad": "15705, Santiago de Compostela, A Coruña"
+    },
+    {
+      "nombre": "CAN CAT",
+      "lat": "42.86464182574938",
+      "lon": "-8.542863796534746",
+      "direccion": "Rúa do Restollal, 15",
+      "ciudad": "15702, Santiago de Compostela, A Coruña"
+    }
+  ]
+}

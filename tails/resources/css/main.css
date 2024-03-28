@@ -1,0 +1,169 @@
+@import url("fonts.css");
+
+.title-back {
+  color: #13134b;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  transform: translateY(-40%);
+  font-size: 66vw;
+}
+
+main > header {
+  display: grid;
+  place-items: center;
+}
+
+header > div {
+  --img-font-size: 600px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  margin-top: 75px;
+}
+
+.title-front {
+  position: absolute;
+  color: white;
+  font-size: calc(var(--img-font-size) - 35 / 100 * var(--img-font-size));
+  top: 23%;
+}
+
+main header img {
+  aspect-ratio: 2/3;
+  width: var(--img-font-size);
+}
+
+section {
+  --marging-sides: 10px;
+}
+
+.about-us{
+  --marging-bottom: -55px;
+  --figure-height: 400px;
+  position: relative;
+  height: 330px;
+  overflow: hidden;
+  border-bottom: 1px solid black;
+}
+
+/* Aquí se incluye el uso de `float` */
+.about-us > figure {
+  float: right; /* Flota la imagen a la derecha */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: var(--figure-height);
+  transform: rotate(90deg);
+  margin-right: calc(5 * var(--marging-sides));
+  margin-bottom: var(--marging-bottom);
+}
+
+.about-us img {
+  width: 100%;
+  height: var(--figure-height);
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.about-us > h2 {
+  font-size: clamp(1.5em, 13vw, 12em);
+  margin-left: var(--marging-sides);
+  position: absolute;
+  float: left; /* Flota el título a la izquierda de la imagen anterior */
+  bottom: 0;
+  left: 0;
+}
+
+.description {
+  position: relative;
+  height: 350px;
+}
+
+.description > figure {
+  float: left; /* Flota la imagen a la izquierda, correspondiente al apartado
+                de la descripción */
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.description img {
+  height: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  object-position: 0 75%;
+}
+
+.description p {
+  float: right; /* Flota el texto de la descripción a la derecha */
+  max-width: 45%;
+  text-align: justify;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  margin-right: 4vw;
+}
+
+@media screen and (max-width: 1025px) {
+  header > div {
+    --img-font-size: 500px;
+  }
+
+  .about-us {
+    --figure-height: 300px;
+    height: var(--figure-height);
+  }
+
+  /* Para dispositivos más pequeños no es necesario flotar los elementos */
+  .about-us > figure {
+    float: none; /* <- */
+    position: absolute;
+    z-index: -1;
+  }
+
+  .description {
+    display: grid;
+    place-items: center;
+    row-gap: 20px;
+    padding-top: 20px;
+    height: 100%;
+  }
+
+  .description > figure {
+    float: none;  /* <- */
+    position: static;
+    max-width: 100%;
+  }
+
+  .description img {
+    max-width: 100%;
+  }
+
+  .description > p {
+    float: none;  /* <- */
+    position: static;
+    transform: none;
+    max-width: 95%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  header > div {
+    --img-font-size: 400px;
+  }
+
+  .title-back {
+    font-size: 70vw;
+    transform: translateY(-30%);
+  }
+
+  .about-us > figure {
+    margin: 0;
+    bottom: var(--marging-bottom);
+  }
+}

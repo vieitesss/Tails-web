@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pyr>
+  <protectoras>
+    <protectora>
+      <nombre>MPS Unión Protectora</nombre>
+      <lat>42.87581602038418</lat>
+      <lon>-8.543780360767858</lon>
+      <direccion>Rúa do Hórreo, 19</direccion>
+      <ciudad>15702, Santiago de Compostela, A Coruña</ciudad>
+    </protectora>
+    <protectora>
+      <nombre>Fundación Intered</nombre>
+      <lat>42.88128735010068</lat>
+      <lon>-8.539873345151229</lon>
+      <direccion>Praza do Matadoiro, 7</direccion>
+      <ciudad>15703, Santiago de Compostela, A Coruña</ciudad>
+    </protectora>
+  </protectoras>
+  <refugios>
+    <refugio>
+      <nombre>O Refuxio de Bando</nombre>
+      <lat>42.879626436377755</lat>
+      <lon>-8.467444042122443</lon>
+      <direccion>s/n, Lugar Zarramacedo-Bando</direccion>
+      <ciudad>15820, A Coruña</ciudad>
+    </refugio>
+  </refugios>
+</pyr>

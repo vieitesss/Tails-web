@@ -1,0 +1,234 @@
+body {
+  --map-width: 80%;
+  --accordion-header-height: 30px;
+  background: var(--main-background) !important;
+}
+
+/* tengo que volver a incluir el background en algunos lugares por culpa
+ * de Bootstrap */
+.content-wrapper {
+  background: var(--main-background);
+}
+
+main {
+  background: var(--main-background);
+  max-width: var(--max-content-width);
+  margin-inline: auto;
+}
+
+.my-nav > nav {
+  margin-top: 10px;
+}
+
+.my-nav-list {
+  margin-top: 8px;
+}
+
+p {
+  font-family: "Qasbyne", sans-serif;
+}
+
+header > h1 {
+  font-size: clamp(4em, 13vw, 8em);
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+header > h3 {
+  text-align: center;
+  font-size: 1.7em;
+  max-width: 70%;
+  margin: var(--body-margin) auto;
+}
+
+header {
+  border-bottom: 1px solid black;
+  margin-bottom: var(--body-margin);
+  padding-bottom: var(--body-margin);
+}
+
+.street-cats {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.street-cats > figure {
+  margin: 0;
+  max-width: 400px;
+}
+
+.street-cats img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.street-cats > figure:nth-child(1) img {
+  object-position: bottom;
+}
+
+#rescue {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: var(--body-margin);
+}
+
+.rescue-item {
+  flex: 1;
+  margin: 0 auto;
+  padding: calc(var(--body-margin) / 2);
+}
+
+.rescue-item h2 {
+  text-align: center;
+  margin: auto;
+  font-size: 3em;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.rescue-item h3 {
+  font-size: 2em;
+}
+
+#rescue figure {
+  margin: 0;
+  max-width: 300px;
+}
+
+#rescue img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+
+#rescue img:nth-child(1) {
+  object-position: bottom;
+}
+
+#map {
+  aspect-ratio: 16/9;
+  width: var(--map-width);
+  min-width: 300px;
+  height: 100%;
+}
+
+/* acordeon */
+
+section > h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5em;
+}
+
+.map-section {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.map-options-wrapper {
+  display: grid;
+  place-items: center;
+  max-width: 100%;
+  padding: 0;
+  min-height: 600px;
+}
+
+#accordion {
+  list-style: none;
+  max-width: var(--map-width);
+  width: 100%;
+  padding: 0;
+}
+
+.accordion-body {
+  max-height: calc(var(--map-width) - 4 * var(--accordion-header-height));
+  overflow: auto;
+  padding: 0;
+}
+
+.accordion-collapse {
+  padding: 0;
+  list-style: none;
+}
+
+.accordion-collapse li {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 961px) {
+  #rescue {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(var(--body-margin) * 2);
+  }
+
+  .rescue-item {
+    display: grid;
+    place-items: center;
+  }
+
+  .map-section {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  #map {
+    width: 100%;
+  }
+
+  .map-options-wrapper {
+    min-height: 0;
+  }
+
+  #accordion {
+    margin-top: 10px;
+    max-width: 100%;
+    margin-bottom: auto;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  #rescue {
+    grid-template-columns: 1fr;
+  }
+
+  .rescue-item.title {
+    grid-row: 1
+  }
+
+  .rescue-item > p{
+    max-width: 700px;
+  }
+
+  header h3 {
+    font-size: 1.3em;
+  }
+
+  .rescue-item h2 {
+    font-size: 2.5em;
+  }
+
+  #rescue figure {
+    max-width: 300px;
+  }
+
+  .street-cats > figure:first-child {
+    display: none;
+  }
+
+  .street-cats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
